@@ -1,0 +1,13 @@
+#btn
+{
+    background-color:black;
+    color: red;
+    border: 2px solid gray;
+    border-radius: 20px;
+    font-size: 20px;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

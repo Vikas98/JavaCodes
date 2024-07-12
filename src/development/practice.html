@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake and Ladder Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #board {
+            display: grid;
+            grid-template-columns: repeat(10, 100px);
+            grid-template-rows: repeat(10, 100px);
+            grid-gap: 1px;
+            background-color: #ccc;
+        }
+
+        .cell {
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #player-1, #player-2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50px;
+            height: 50px;
+        }
+
+        #player-1 .head, #player-2 .head {
+            width: 100%;
+            height: 0;
+            padding-top: 100%;
+            border-radius: 50%;
+            background-color: #f00;
+        }
+
+        #player-1 .body, #player-2 .body {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            padding-bottom: 100%;
+            background-color: #f00;
+        }
+
+        #roll-dice {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="board">
+    <div class="cell" id="cell-1"></div>
+    <!-- Add more cells here -->
+</div>
+<div id="player-1">
+    <div class="head"></div>
+    <div class="body"></div>
+</div>
+<div id="player-2">
+    <div class="head"></div>
+    <div class="body"></div>
+</div>
+<button id="roll-dice">Roll Dice</button>
+<script src="script.js">
+    const board = document.getElementById('board');
+    const players = [
+        { id: 'player-1', x: 0, y: 0, dice: 0 },
+        { id: 'player-2', x: 0, y: 0, dice: 0 },
+    ];
+    const rollDiceButton = document.getElementById('roll-dice');
+
+    // Add cells to the board
+    for (let i = 1; i <= 100; i++) {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        cell.id = `cell-${i}`;
+        cell.textContent = i;
+        board.appendChild(cell);
+    }
+
+    // Move a player
+    function movePlayer(player, steps) {
+        const x = player.x;
+        const y = player.y;
+        const cell = document.getElementById(`cell-${x + y}`);
+</script>
+</body>
+</html>

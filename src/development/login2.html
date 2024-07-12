@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vikas Sauni - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        section {
+            background-color: #f7f7f7;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Vikas Sauni</h1>
+    <h2>Web Developer</h2>
+</header>
+<main>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Vikas Sauni, a web developer with a background in computer science and engineering. I specialize in front-end and back-end web development using technologies like React, Node.js, and MongoDB. My experience includes building e-commerce websites, developing machine learning algorithms, and managing databases. I am passionate about learning new technologies and improving my skills.</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Node.js</li>
+            <li>MongoDB</li>
+            <li>Python</li>
+            <li>TensorFlow</li>
+        </ul>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>Web Developer at XYZ Company</li>
+            <li>Web Developer Intern at ABC Corporation</li>
+        </ul>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <h3>Bachelor of Technology in Computer Science and Engineering</h3>
+        <p>Haridwar Institute of Technology and Management, Haridwar, Uttarakhand</p>
+        <p>August 2013 - May 2017</p>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <h3>Project 1: E-commerce Website</h3>
+                <p>Description: A full-stack e-commerce website built using React, Node.js, and MongoDB. The website allows users to browse and purchase products, view their order history, and manage their account settings.</p>
+                <p>Technologies Used: React, Node.js, MongoDB, Express.js,Stripe, Bootstrap</p>
+            </li>
+            <li>
+                <h3>Project 2: Machine Learning Algorithm</h3>
+                <p>Description: A machine learning algorithm that predicts the probability of a customer churning based on various factors, such as their usage patterns and demographic information.</p>
+                <p>Technologies Used: Python, NumPy, Pandas, Scikit-learn, TensorFlow</p>
+            </li>
+        </ul>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2023 Vikas Sauni</p>
+</footer>
+<script>
+    // Add event listeners to the navigation menu
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                const sectionId = link.getAttribute("href").substring(1);
+                const section = document.getElementById(sectionId);
+                section.scrollIntoView({ behavior: "smooth" });
+            });
+        });
+    });
+</script>
+</body>
+</html>
